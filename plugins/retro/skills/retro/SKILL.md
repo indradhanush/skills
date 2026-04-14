@@ -101,11 +101,6 @@ session to avoid polluting the working session's context.
 ### Retro plan template
 
 ```org
-:PROPERTIES:
-:STATUS: DRAFT
-:STATUS_UPDATED_ON: <today>
-:END:
-
 * Context
 <verbatim exchange or factual summary>
 
