@@ -105,8 +105,6 @@ session to avoid polluting the working session's context.
 :STATUS: DRAFT
 :STATUS_UPDATED_ON: <today>
 :END:
-#+TITLE: Retro: <short description>
-#+DATE: <today>
 
 * Context
 <verbatim exchange or factual summary>
