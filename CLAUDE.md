@@ -43,7 +43,19 @@ This is a Claude Code plugin marketplace hosted at `indradhanush/skills`. It dis
    }
    ```
 
-5. Add an entry to `README.md` under `## Skills`.
+5. Add an entry to `README.md` under `## Skills` with the skill name, a one-line description, and the install command.
+
+## Modifying an existing skill
+
+- Update `SKILL.md` and/or `plugin.json` as needed.
+- Bump `version` in `plugin.json`.
+- Update the skill's entry in `README.md` if the description or behavior changed.
+
+## Removing a skill
+
+- Delete `plugins/<skill-name>/`.
+- Remove its entry from `.claude-plugin/marketplace.json`.
+- Remove its entry from `README.md`.
 
 ## Validate before pushing
 
