@@ -1,0 +1,17 @@
+{
+  "name": "indradhanush-skills",
+  "owner": {
+    "name": "Indradhanush Gupta",
+    "email": "me@igupta.in"
+  },
+  "metadata": {
+    "description": "Personal Claude Code skills by Indradhanush Gupta"
+  },
+  "plugins": [
+    {
+      "name": "retro",
+      "source": "./plugins/retro",
+      "description": "Retrospective analysis of Claude decisions within a session"
+    }
+  ]
+}

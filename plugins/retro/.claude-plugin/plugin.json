@@ -1,0 +1,5 @@
+{
+  "name": "retro",
+  "description": "Retrospective analysis of Claude decisions within a session",
+  "version": "1.0.0"
+}
