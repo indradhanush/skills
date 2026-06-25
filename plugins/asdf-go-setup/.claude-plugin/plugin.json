@@ -1,0 +1,5 @@
+{
+  "name": "asdf-go-setup",
+  "description": "Install and configure gopls for a Go project managed by asdf",
+  "version": "1.0.0"
+}
