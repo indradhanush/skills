@@ -1,0 +1,5 @@
+{
+  "name": "reflect",
+  "description": "Extract reusable patterns from a session into memory, CLAUDE.md, or new skills/agents",
+  "version": "1.0.0"
+}

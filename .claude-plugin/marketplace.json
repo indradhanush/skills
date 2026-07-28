@@ -14,6 +14,11 @@
       "description": "Retrospective analysis of Claude decisions within a session"
     },
     {
+      "name": "reflect",
+      "source": "./plugins/reflect",
+      "description": "Extract reusable patterns from a session into memory, CLAUDE.md, or new skills/agents"
+    },
+    {
       "name": "asdf-go-setup",
       "source": "./plugins/asdf-go-setup",
       "description": "Install and configure gopls for a Go project managed by asdf"
