@@ -18,8 +18,12 @@ asdf's golang plugin only scans `bin/` and `go/bin/` inside an install
 (via `list-bin-paths`). gopls must live at:
 
 ```
-$ASDF_DIR/installs/golang/<version>/bin/gopls
+$ASDF_DATA/installs/golang/<version>/bin/gopls
 ```
+
+`ASDF_DATA` is the asdf data directory, `${ASDF_DATA_DIR:-$HOME/.asdf}`. It
+is not `ASDF_DIR`. When Nix installs asdf, `ASDF_DIR` points to a read-only
+`/nix/store` path and the installs live under `~/.asdf`.
 
 `go install` without an explicit `GOBIN` puts the binary in `$GOPATH/bin`
 (`packages/bin/`), which asdf never finds. The fix is to set both `GOBIN`
@@ -49,24 +53,37 @@ grep '^golang ' <path>/.tool-versions | awk '{print $2}'
 grep '^go ' <path>/go.mod | awk '{print $2}'
 ```
 
-### 3. Locate ASDF_DIR
+### 3. Locate the asdf data directory
 
 ```bash
-echo "${ASDF_DIR:-$HOME/.asdf}"
+echo "${ASDF_DATA_DIR:-$HOME/.asdf}"
 ```
+
+Use this value as `$ASDF_DATA` in every `installs/` path below. Do not use
+`ASDF_DIR` for these paths.
 
 ### 4. Verify the version is installed
 
+Run this from inside the project path, so asdf reads the project's
+`.tool-versions`:
+
 ```bash
-asdf list golang | grep -F "<version>"
+cd <path> && asdf current golang
 ```
 
-If missing, tell the user to run `asdf install golang <version>` and stop.
+The installed column shows `true` or `false`.
+
+If it shows `false`, tell the user the exact command,
+`asdf install golang <version>`, and ask once whether to run it. On yes, run
+it and continue to step 5. On no, stop.
+
+If the install directory has no `bin/` or `go/bin/`, the install is broken.
+Offer to reinstall it the same way.
 
 ### 5. Check whether gopls is already installed
 
 ```bash
-ls "$ASDF_DIR/installs/golang/<version>/bin/gopls" 2>/dev/null
+ls "$ASDF_DATA/installs/golang/<version>/bin/gopls" 2>/dev/null
 ```
 
 If the binary exists, skip to step 7.
@@ -76,9 +93,9 @@ If the binary exists, skip to step 7.
 Use the Go binary for that exact version so the module cache stays isolated:
 
 ```bash
-GOBIN="$ASDF_DIR/installs/golang/<version>/bin" \
-GOPATH="$ASDF_DIR/installs/golang/<version>/packages" \
-  "$ASDF_DIR/installs/golang/<version>/go/bin/go" install \
+GOBIN="$ASDF_DATA/installs/golang/<version>/bin" \
+GOPATH="$ASDF_DATA/installs/golang/<version>/packages" \
+  "$ASDF_DATA/installs/golang/<version>/go/bin/go" install \
   golang.org/x/tools/gopls@latest
 ```
 
@@ -101,7 +118,7 @@ Run this from inside the project path:
 cd <path> && asdf which gopls
 ```
 
-Expected output: `$ASDF_DIR/installs/golang/<version>/bin/gopls`
+Expected output: `$ASDF_DATA/installs/golang/<version>/bin/gopls`
 
 If it still fails, check that `<path>/.tool-versions` contains
 `golang <version>` — the shim uses that file to resolve which version to
