@@ -39,3 +39,13 @@ Trigger phrases: "unslop", "this reads like AI", "too wordy", "tighten this", "d
 ```
 /plugin install unslop@indradhanush-skills
 ```
+
+### review-loop
+
+Run `/code-review`, add Go, architecture and tautology guide passes, review plan and doc files, clean up comments when no pull request exists, and optionally improve the guides from the session. Needs the `unslop` plugin.
+
+Trigger phrases: "/review-loop", "run the review loop".
+
+```
+/plugin install review-loop@indradhanush-skills
+```

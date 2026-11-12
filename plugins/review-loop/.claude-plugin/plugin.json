@@ -1,0 +1,5 @@
+{
+  "name": "review-loop",
+  "description": "Code review loop: /code-review, language and architecture guide passes, tautology check, plan and doc review, comment cleanup, opt-in reinforcement of the guides",
+  "version": "1.0.0"
+}

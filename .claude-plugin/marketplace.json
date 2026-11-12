@@ -27,6 +27,11 @@
       "name": "unslop",
       "source": "./plugins/unslop",
       "description": "Rewrite AI-cadence prose in commit messages, PR bodies and code comments into Dhanush's voice"
+    },
+    {
+      "name": "review-loop",
+      "source": "./plugins/review-loop",
+      "description": "Code review loop: /code-review, language and architecture guide passes, tautology check, plan and doc review, comment cleanup, opt-in reinforcement of the guides"
     }
   ]
 }
