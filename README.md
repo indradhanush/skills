@@ -22,9 +22,9 @@ Trigger phrases: "why did you do that", "I didn't ask for that", "what were you 
 
 ### reflect
 
-Extract reusable patterns from a session into memory, CLAUDE.md, or new skills/agents.
+Extract reusable patterns and flag instruction violations, routing fixes to memory, CLAUDE.md, or skill/agent docs.
 
-Trigger phrases: "reflect on this session", "what should we remember from this", "any patterns worth saving", "should this be a skill", "capture this for next time".
+Trigger phrases: "reflect on this session", "what should we remember from this", "any patterns worth saving", "should this be a skill", "why didn't an existing rule catch that", "capture this for next time".
 
 ```
 /plugin install reflect@indradhanush-skills

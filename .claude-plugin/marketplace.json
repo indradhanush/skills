@@ -16,7 +16,7 @@
     {
       "name": "reflect",
       "source": "./plugins/reflect",
-      "description": "Extract reusable patterns from a session into memory, CLAUDE.md, or new skills/agents"
+      "description": "Extract reusable patterns and flag instruction violations, routing fixes to memory, CLAUDE.md, or skill/agent docs"
     },
     {
       "name": "asdf-go-setup",
