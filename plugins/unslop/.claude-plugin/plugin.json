@@ -1,0 +1,5 @@
+{
+  "name": "unslop",
+  "description": "Rewrite AI-cadence prose in commit messages, PR bodies and code comments into Dhanush's voice",
+  "version": "1.0.0"
+}

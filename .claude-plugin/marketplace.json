@@ -22,6 +22,11 @@
       "name": "asdf-go-setup",
       "source": "./plugins/asdf-go-setup",
       "description": "Install and configure gopls for a Go project managed by asdf"
+    },
+    {
+      "name": "unslop",
+      "source": "./plugins/unslop",
+      "description": "Rewrite AI-cadence prose in commit messages, PR bodies and code comments into Dhanush's voice"
     }
   ]
 }

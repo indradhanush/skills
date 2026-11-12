@@ -29,3 +29,13 @@ Trigger phrases: "reflect on this session", "what should we remember from this",
 ```
 /plugin install reflect@indradhanush-skills
 ```
+
+### unslop
+
+Rewrite AI-cadence prose in commit messages, PR bodies and code comments into Dhanush's voice.
+
+Trigger phrases: "unslop", "this reads like AI", "too wordy", "tighten this", "de-slop".
+
+```
+/plugin install unslop@indradhanush-skills
+```
