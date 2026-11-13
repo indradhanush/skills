@@ -95,11 +95,23 @@ These are in `~/CLAUDE.md`. Apply them without being asked.
 
 ## Per-artifact
 
-**Code comments.** The why. One or two lines. If the comment is longer than the
-code it explains, the code needs renaming, not documenting.
+**Code comments.** State the rule the code enforces, and the reason when it is
+not obvious. Name the thing it refers to. One or two short sentences. Run this
+skill on every code comment you write or edit, before the change is committed.
+
+- Never describe an absence, the history, or how another component works.
+- Mention no mechanism the code does not use.
+- Leak no local machine information. Do not point at a local file that does not
+  exist in the project where the commit is made, and do not name plan files.
+- Keep the same "why" out of both the comment and the commit message for one
+  change. Pick one place. Rationale tied to this change's history belongs in the
+  commit message. The comment holds durable context a future reader of the code
+  needs.
+- If the comment is longer than the code it explains, the code needs renaming,
+  not documenting.
 
 **Commit messages.** Subject under 80 chars, imperative. Body uses the
-Problem and Solution bullet format from `## Comitting Code` in AGENTS.md.
+Problem and Solution bullet format from the `commit` skill.
 Never narrate the diff.
 
 The session that wrote the change runs this on its own commit message. It knows

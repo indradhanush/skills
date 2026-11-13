@@ -16,7 +16,9 @@ Writing or revising a commit message, PR body or code comment. Phrases such as
   summaries.
 - Applies two different moves. Cutting duplication suits PR bodies, commit
   bodies and comments. Varying rhythm suits teaching docs, references and plans.
-- Applies per-artifact rules. A code comment states the why in one or two lines.
+- Applies per-artifact rules. A code comment states the rule the code enforces
+  and the reason in one or two short sentences. It leaks no local machine
+  details or plan file names, and it does not repeat the commit message.
 
 `EXAMPLES.md` holds worked before and after pairs.
 
